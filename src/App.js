@@ -1,8 +1,8 @@
 import React from "react";
 import { ApolloProvider } from "@apollo/client";
-import { client } from "./client";
-import { ItemList } from "./ItemList";
-import { AddItem } from "./AddItem";
+import { client } from "./config/client";
+import { ItemList } from "./components/ItemList";
+import { AddItem } from "./components/AddItem";
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Typography from '@material-ui/core/Typography';
 import AppBar from '@material-ui/core/AppBar';

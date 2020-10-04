@@ -1,7 +1,6 @@
 import React from "react";
-import ReactDOM from 'react-dom';
-import gql from "graphql-tag";
 import { useMutation } from "@apollo/react-hooks";
+import { ITEMS_QUERY, CREATE_ITEM } from "../query";
 import Container from '@material-ui/core/Container';
 import Button from '@material-ui/core/Button';
 import SaveIcon from '@material-ui/icons/Save';
@@ -10,26 +9,6 @@ import Fab from '@material-ui/core/Fab';
 import AddIcon from '@material-ui/icons/Add';
 import Drawer from '@material-ui/core/Drawer';
 import { makeStyles } from '@material-ui/core/styles';
-
-const CREATE_ITEM = gql`
- mutation CreateItem($data: ItemInput!) {
-   createItem(data: $data) {
-     _id
-   }
- }
-`;
-
-
-const ITEMS_QUERY = gql`
- {
-   allItems {
-     data {
-       _id
-       name
-     }
-   }
- }
-`;
 
 const useStyles = makeStyles((theme) => ({
   fab: {
